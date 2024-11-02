@@ -1,4 +1,4 @@
-import './App.css'
+import './assets/css/main.css'
 import Brands from './components/Brands'
 import Faq from './components/Faq'
 import Features from './components/Features'
