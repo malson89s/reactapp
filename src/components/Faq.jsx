@@ -1,4 +1,6 @@
 import React from 'react'
+import BluePhoneIcon from '../assets/images project/call-icon.svg'
+import MessageIcon from '../assets/images project/message-icon.svg'
 
 const Faq = () => {
   return (
@@ -10,7 +12,7 @@ const Faq = () => {
        <p>Still have unanswered questions and need to get in touch?</p>
      </div>
      <div className="contact-1">
-       <i className="contact-icon"><img src="images project/call-icon.svg" alt="blue phone icon" /></i>
+       <i className="contact-icon"><img src={BluePhoneIcon} alt="blue phone icon" /></i>
        <p>Still have questions?</p>
        <a id="Contact us" href="#" aria-label="come in contact by calling us" className="">
          <span>Contact us</span>
@@ -19,7 +21,7 @@ const Faq = () => {
 
      </div>
      <div className="contact-2">
-       <i className="contact-icon"><img src="images project/message-icon.svg" alt="green message icon" /></i>
+       <i className="contact-icon"><img src={MessageIcon} alt="green message icon" /></i>
        <p>Don't like phone calls?</p>
        <a id="Contact us" href="#" aria-label=" come in contact by message us" className="text-details">
          <span>Contact us</span>

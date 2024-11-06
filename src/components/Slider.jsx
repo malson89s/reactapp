@@ -1,20 +1,23 @@
 import React from 'react'
+import PhoneSlide1 from '../assets/images project/phone-slide-1.svg'
+import PhoneSlide2 from '../assets/images project/phone-slide-2.svg'
+import PhoneSlide3 from '../assets/images project/phone-slide-3.svg'
 
 const Slider = () => {
   return (
 <section aria-label="How does it work" className="slider">
     <div className="container">
-      <h2>How does it work?</h2>
+      <h1>How does it work?</h1>
 
       <div className="carousel">
         <div className="carousel-item">
-          <img src="images project/phone-slide-1.svg" alt="my budget info on phone slide-1" />
+          <img src={PhoneSlide1} alt="my budget info on phone slide-1" />
         </div>
         <div className="carousel-item">
-          <img src="images project/iPhone-12-slide-2.svg" alt="your cards info on phone slide-2" />
+          <img src={PhoneSlide2} alt="your cards info on phone slide-2" />
         </div>
         <div className="carousel-item">
-          <img src="images project/phone-slide-3.svg" alt="transfer info on phone slide-3" />
+          <img src={PhoneSlide3} alt="transfer info on phone slide-3" />
         </div>
       </div>
 
