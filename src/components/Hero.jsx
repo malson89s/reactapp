@@ -1,6 +1,8 @@
 import React from 'react'
 import LogoType from '../assets/images project/appstore.svg'
 import Image from '../assets/images project/googleplay.svg'
+import IphoneMyBudget from '../assets/images project/iphone-mybudget_desktop.svg'
+import IphoneYourCards from '../assets/images project/iphone-yourcards_desktop.svg'
 
 const Hero = () => {
   return (
@@ -31,8 +33,8 @@ const Hero = () => {
               </a>
      </div>
      <div className="images">
-       <img className="img-back" src="images project/iphone-mybudget_desktop.svg" alt="iphone displaying graph credit" />
-       <img className="img-front" src="images project/iphone-yourcards_desktop.svg" alt="iphone displaying credit card" />
+       <img className="img-back" src={IphoneMyBudget} alt="iphone displaying graph credit" />
+       <img className="img-front" src={IphoneYourCards} alt="iphone displaying credit card" />
      </div>
    </div>
  </section>

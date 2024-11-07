@@ -548,13 +548,17 @@ footer {
     font-size: 1rem;
     font-weight: 400;
     display: grid; 
-    grid-template: repeat(3, 200px) / repeat(4, 350px);
-    padding: 3rem;
+    grid-template: repeat(3, 190px) / repeat(4, 350px);
+    padding: 4rem;
+    margin-bottom: 1rem;
+    
+
 
 
 
     p {
      color: var(--color-gray-body-text); 
+
 
     } 
 
@@ -569,7 +573,8 @@ footer {
 
     .grid-item-1 {
         grid-column: 2 / 4;
-        grid-row: 1 / 2; 
+        grid-row: 1 / 2;
+        transform: translateY(-20%); 
         
         p {
         color: var(--color-gray);
@@ -582,7 +587,8 @@ footer {
         grid-row: 2 / 3; 
         display: flex;
         text-align: start;
-        align-items: start;    
+        align-items: start; 
+          
         
     }
 
@@ -838,6 +844,7 @@ footer {
         background-color: var(--color-lightgray);
 
 
+
         }
     
 
@@ -944,7 +951,8 @@ footer {
         grid-template: repeat(1, 100px) / repeat(1, 100px);
         padding: 2rem; 
         margin: 2fr auto;
-        margin-top: 2rem;
+        margin-top: 0;
+
 
 
 
@@ -1051,6 +1059,8 @@ footer {
   grid-template-rows: repeat(1, 1fr);
   column-gap: 7rem;
   align-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
   
 } 
 
