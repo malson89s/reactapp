@@ -15,6 +15,7 @@
     --color-white: #FFFFFF;
     --color-blue: #4C82F7;
     --color-green: #22C55E;
+    --color-yellow: #FFBA08;
     
 
     --container-padding: 1rem;
@@ -810,6 +811,7 @@ footer {
         width: 60%;
         transform: translateX(60%);
         padding-top: 2rem;
+        padding-left: 1rem;
         
 
         .btn-2 {
@@ -827,6 +829,7 @@ footer {
         width: 60%;
         transform: translateX(10%);
         padding-top: 2rem;
+        
 
     } 
 
@@ -836,217 +839,124 @@ footer {
 
 /* MORE END */
 
-/* TESTIMONIALS START */
-#testimonials {
+/* TESTIMONIAL START */
 
-    .flex-container {
-        padding: blocK;
-        background-color: var(--color-lightgray);
+/* Wrapper  background */
+#testimonials-wrapper  {
+    display: block;
+    margin: 0;
+    background-color: var(--color-lightgray); 
 
-
-
-        }
-    
-
-
-    .flexbox {
-        display: flex;       
-        /* justify-content: space-evenly; */
-        padding: 4rem; 
-        justify-content: center;
-        box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-
-
-
-
-
-
-        .card-1, .card-2 {
-            
-            background-color: var(--color-white);
-            border: var(--color-divider-border-gray);
-            height: 320px;
-            width: 400px; 
-            margin: 1rem;
-            padding: 1rem; 
-            border-radius: 6px; 
-            box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
-            
-            
-        } 
-
-        .img-1, .img-2 {
-            background-color: var(--color-primary);
-            display: inline-block;
-            border-radius: 4px;
-            padding-top: 0.5rem; 
-            padding-inline: 0.5rem;
-            transform: translateY(-50%);
- 
-
-        
-        }
-
-
-        .customer {
-            display: flex;
-            padding-left: 1rem;
-
-        
-        } 
-
-       .card-1 > p, h3 {
-            
-            padding-bottom: 0;
-            margin-bottom: 0;
-            align-items: center;
-
-             
-        } 
-        .card-2 >  p, h3 {
-            
-            padding-bottom: 0;
-            margin-bottom: 0;
-            align-items: center;
-             
-        } 
-        .face {
-            transform:translateY(30%);
-            padding-right: 1rem;
-            
-        }
-        .img-1, .img-2 {
-            transform: translateY(-80%);
-        }
-
-        .title {
-            width: 306px;
-            height: 104px;
-            padding: 2rem;
-            font-weight: 800;
-            line-height: 130%;
-            font-size: 20px;
-        }
-
-    }
-
- }
- @media (max-width: 1400px) {
-    #reviews{
-       display: none;
-
-     }
-
-       }
-
-/* TESTIMONIALS END */
-
-
-
-/* SUBSCRIBE START */
- #subscribe { 
 
     .container { 
-        display: flex;
-        grid-template: repeat(1, 100px) / repeat(1, 100px);
-        padding: 2rem; 
-        margin: 2fr auto;
-        margin-top: 0;
+    position: relative;
+    display: flex;
+    padding-left: 2rem;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; 
+
+}
 
 
-
-
-        justify-content: center;
-        align-items: center;
-
-        background: var(--color-lightgray);
-        border-radius: 8px;
-
-        .logo {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            padding-right: 2rem;
-            transform: translateX(50%);
-
-        }
-
-        .info {
-            grid-column-start: 2;
-            grid-column-end: 3;
-            transform: translateX(20%); 
-            padding-right: 4rem;
-            margin-right: 5rem;
-
+  .first-column {
+    margin: 0;
+    font-weight: 900;
     
-        }
 
-        .input-group {
-            grid-column-start: 3;
-            grid-column-end: 4;
-
-        }
-     }
-
-
-
-
-     .btn {
-        background-color: var(--color-primary);
-        color: var(--color-white);
-        padding: .8em 2em;
-
-        border: 0;
-        font-size: 1.125rem;
-        cursor: pointer;
-    
-      }
-
-
-
-     .form-input {
-        border: 1px solid var(--color-forms-border);
-        padding: 0.5em;
-        font-size: 16px;
-        color: var(--color-input-place-holder);
-
-     }
-
-     .input-group {
-        display: flex;
-        
-        .form-input {
-            border-radius: .5em 0 0 .5em;
-        }
-
-        .btn {
-            border-radius: 0 .5em .5em 0;
-        }
-
-     }
-
-
-     .input-group {
-        position: relative;
-        margin-left: 3rem;
-
-     }
-
-     .icon {
-        position: absolute;
-        top: 50%;
-        left: .5rem;
-
-        transform: translateY(-50%);
-     }
-
-     .email {
-        padding-left: 2rem;
- 
-     }
-
-    
  }
- /* SUBSCRIBE END */
+
+  .client-testimonials {
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--color-white); 
+    border-radius: 8px;
+    margin: 2rem; 
+    justify-content: center;
+
+    
+     } 
+
+
+
+      .testimonials  {
+        display: flex; 
+        align-items: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 4rem;
+     }
+     
+
+  
+  /*  icon styling */
+  .quote-icon {
+    background-color: var(--color-primary);
+    display: inline-block;
+    border-radius: 4px;
+    padding-top: 0.5rem;
+    padding-inline: 0.5rem;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+    
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+
+  .star-rating {
+    margin-bottom: 1rem;
+    color: var(--color-yellow);
+  }
+  
+  /* Testimonial comment */
+  .testimonial p {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--color-gray-body-text);
+    margin-bottom: 1rem;
+  }
+  
+  /* Testimonial author section */
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .testimonial-author .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  /* Author name and job role styling */
+  .author {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .author .role {
+    font-size: 14px;
+    color: var(--color-gray-body-text);
+    margin: 0;
+  }
+  
+
+/* HJÄLP AV CHATGPT */
+/* TESTIMONIAL END */
+}
+
+
+
 
  /* FAQS SECTION START */
 
@@ -1148,6 +1058,8 @@ box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(
     width: 20px;
 }
 
+
+
 #accordion li label {
     padding: 10px;
     display: flex;
@@ -1189,27 +1101,83 @@ box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(
 }
 
 
+
+
  }
 
  /* FAQS SECTION END */
 
- /* CONTACT PAGE START */
 
- #contact { 
+/* SUBSCRIBE START */
+#subscribe { 
 
+    .container { 
+        display: flex;
+        grid-template: repeat(1, 100px) / repeat(1, 100px);
+        padding: 2rem; 
+        margin: 2fr auto;
+        margin-top: 0;
+        justify-content: center;
+        align-items: center;
 
-    padding: block;
-    width: 1920px;
-    height: 777px;
-    background-color: var(--color-lightgray);
+        background: var(--color-lightgray);
+        border-radius: 8px;
+     
 
+        .bell {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            padding-right: 2rem;
+            transform: translateX(50%);
 
+        }
 
-}
-.map {
-    display: flex;
-    padding: 1rem;
+        .header {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            transform: translateX(20%); 
+            padding-right: 4rem;
+            margin-right: 10rem;
+
     
-}
+        }
 
- /* CONTACT PAGE END */
+        .form-group {
+            display: flex;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            font-size: 16px;
+            border-radius: .5em 0 0 .5em;
+            margin: 0;
+            color: var(--color-input-place-holder);
+
+     }
+
+        .email {
+         display: grid;
+         font-size: 16px;
+         border-radius: .5em 0 0 .5em;
+         margin: 0;
+
+
+        }
+
+
+
+     .btn {
+        display: flex;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: .8em 2em;
+        border: 0;
+        font-size: 1.125rem;
+        cursor: pointer;
+        border-radius: 0 .5em .5em 0;
+        margin: 0;
+      }
+
+    }
+
+    
+ }
+ /* SUBSCRIBE END */

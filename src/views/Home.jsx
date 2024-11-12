@@ -5,9 +5,12 @@ import Brands from '../components/Brands'
 import Features from '../components/Features'
 import Slider from '../components/Slider'
 import More from '../components/More'
-import Testimonials from '../components/Testimonials'
 import Faq from '../components/Faq'
 import Subscribe from '../components/Subscribe'
+import ClientTestimonials from '../components/ClientTestimonials'
+
+
+
 
 
 
@@ -21,7 +24,7 @@ const Home = () => {
       <Features />
       <Slider />
       <More />
-      <Testimonials />
+      <ClientTestimonials />
       <Faq />
       <Subscribe />
     </>

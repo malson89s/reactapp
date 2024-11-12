@@ -9,6 +9,10 @@ import MobileButton from './components/MobileButton'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
+
+
+
 function App() {
 
 
@@ -24,8 +28,14 @@ function App() {
          <Route path="/services" element={<Services />} />
          <Route path="/projects" element={<Projects />} />
         </Routes>
+        
+ 
+ 
+
+        <Footer />
       </main> 
-      <Footer />
+
+      
      </div>
     </BrowserRouter>
   )
