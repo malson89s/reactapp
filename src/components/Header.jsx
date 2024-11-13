@@ -6,17 +6,15 @@ const Header = () => {
   return (
   <header>
   <div className="container">
-
-  <Link id="logo" to ="/">
-    <img src={Logotype} alt="Silicon Logotype" />
-  </Link>
+    <Link id="logo" to ="/">
+      <img src={Logotype} alt="Silicon Logotype" />
+     </Link>
 
     <nav id="main-menu" className="navbar" aria-label="main navigation">
       <NavLink className="nav-link" to="/features">Features</NavLink>
       <NavLink className="nav-link" to="/contact">Contact</NavLink>
     </nav>
 
-    
 
       <div id="darkmode-toggle-switch" className="btn-toggle-switch">
         <span className="label">Dark mode</span>

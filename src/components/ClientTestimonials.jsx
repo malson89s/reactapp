@@ -18,7 +18,7 @@ const ClientTestimonials = () => {
     <section id="testimonials-wrapper" className="client-testimonials">
         <div className="container">
         <div className="first-column">
-               <h2>Clients are Loving Our App</h2>
+               <h2>Clients are <br />Loving Our App</h2>
             </div>
             <div className="second-column, third-column">
                 <div className="testimonials">
