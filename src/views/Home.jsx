@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 import Hero from '../components/Hero'
 import Brands from '../components/Brands'
 import Features from '../components/Features'
@@ -10,20 +8,11 @@ import Faq from '../components/Faq'
 import Subscribe from '../components/Subscribe'
 import ClientTestimonials from '../components/ClientTestimonials'
 
-
-
-
-
-
-
-
-
-const Home = () => {
+const Home = ({ isDarkMode }) => {
   return (
     <>
-
-      <Hero />
-      <Brands/>
+      <Hero isDarkMode={isDarkMode} /> {/* Pass the isDarkMode prop to Hero */}
+      <Brands />
       <Features />
       <Slider />
       <More />
@@ -31,7 +20,7 @@ const Home = () => {
       <Faq />
       <Subscribe />
     </>
-  )
-}
+  );
+};
 
 export default Home
