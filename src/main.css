@@ -21,13 +21,19 @@
     --color-box-shadow:0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
     --color-hover-accordion-button: #6365f1be;
     --button-circle-text-hover-color: #0b0f19;
+    --button-circle-color: ;
+    --button-circle-background-color:#ffffff ;
     --background-color-opasity: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
 
     --background-color:#EFF2FC;
     --background-accent-color:#FFFFFF;
     --background-color-opasity-nav:#FFFFFF;
-    
+    --button-circle-icon-color:#F3F6FF;
 
+
+    
+    
+    
     --container-padding: 1rem;
     --transition-time: all 0.2s;
 
@@ -37,6 +43,11 @@
     --link-active-color: #6366f1;
     --box-shadow: 0 0 8px 2px #rgba(0, 0, 0, 0.04);
     --button-accordion-icon-color: #565973;
+    --background-color-subscribe:#EFF2FC ;
+    --button-arrow-accordion: #0B0F19;
+    --color-active-accordion: #6366F1;
+
+    
 }
 
 
@@ -56,11 +67,8 @@
 
     --button-download-background-color: #e2e5f1;
     --button-download-text-color: #0b0f19;
-    
-
-
-    
-
+    --background-color-subscribe: #1f2029;
+    --color-divider-border-gray:#33354d ;
     
 
     --text-color: #666b7d;
@@ -68,6 +76,10 @@
 
     --border-color: #33354d;
     --box-shadow: 0 0 5px #rgba(180, 180, 180, 0.1);
+    --button-circle-background-color:#33354d ;
+    --button-circle-icon-color:#292a38 ;
+    --button-arrow-accordion: #FFFFFF;
+    --color-active-accordion:#6366F1;
     
 
 
@@ -78,6 +90,7 @@
 
 * {
     box-sizing: border-box;
+    
 }
 /* DARK END */
 
@@ -242,9 +255,9 @@ a:is(:hover, :focus) {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid var(--color-divider-border-gray);
-    background-color: var(--color-white);
-    color: var(--color-dark);
+    border: 1px solid var(--color-divider-border-gray); /* border cirkel*/
+    background-color: var(--button-circle-background-color); /* fyllnad cirkel knapp*/
+    color: var(--active-acordion-text); /* pil ner färg*/
 }
 
 
@@ -322,9 +335,8 @@ a:is(:hover, :focus) {
 
 .navbar {
   display: none;
-
-
-
+  width: 650px;
+  padding-left: 1rem;
 
 }
 
@@ -348,6 +360,7 @@ a:is(:hover, :focus) {
 
 #auth-signin {
     display: none;
+    margin-left: 2rem;
     
     
 }
@@ -355,7 +368,7 @@ a:is(:hover, :focus) {
 
 header .container-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 2rem;
     align-items: center;
     width: 100%;
@@ -401,6 +414,7 @@ footer {
     display: none;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    padding-top: 4rem;
 
     .container {
         display: flex;
@@ -520,6 +534,7 @@ footer {
    background:var(--background-color-secondary);
    background: var(--background-color-opasity);
    padding-bottom: 2rem;
+   padding-top: 6rem;
 
    overflow: hidden;
 
@@ -599,7 +614,7 @@ footer {
          }
        }
        .discover-more {
-            color: var(--color-dark);
+            color: var(--active-acordion-text);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -872,6 +887,7 @@ footer {
         padding: 1rem;
         opacity: 95%;
 
+
     } 
 
     .grid-item-1 {
@@ -879,6 +895,7 @@ footer {
         grid-row: 1 / 2;
         transform: translateY(50%);
         padding-left: 1rem;
+
 
    
     }
@@ -892,7 +909,7 @@ footer {
             width: 80%;
             padding-top: .5rem;
             padding-left: 1rem;
-            padding-right: 7rem;
+            padding-right: 6rem;
         }
     }
 
@@ -939,8 +956,12 @@ footer {
         
 
         .btn-2 {
-            width: 80%;
-            padding-top: 1.5rem;
+            width: 90%;
+            padding-top: 2rem;
+
+            
+
+
         }
         
 
@@ -1081,14 +1102,14 @@ footer {
   }
   
 
-/* HJÄLP AV CHATGPT */
+/* HJÄLP AV CHATGPT och på testimonialsjsx/clienttestimonials */
 /* TESTIMONIAL END */
 
 
 /* FAQ SECTION START */
 
 #faq {
-
+    
     padding: 4rem ;
   }
   
@@ -1099,6 +1120,7 @@ footer {
     grid-template-columns: 1fr 0.5fr 4fr; 
     gap: 2rem; 
     align-items: start;
+   
   }
   
 
@@ -1209,8 +1231,8 @@ footer {
   
   .item-icon {
     font-size: 1.4rem;
-    color: var(--color-primary);
-    background-color: var(--color-lightgray);
+    color: var(--button-arrow-accordion);
+    background-color: var(--button-circle-icon-color);
     border-radius: 18px;
     padding: .5rem;
     font-weight: 400;
@@ -1218,14 +1240,15 @@ footer {
   }
   
   .item-titlebar.active .item-icon {
-    transform: rotate(180deg); 
+    background-color: var(--color-active-accordion); 
     
   }
 
   .item-titlebar.active { 
-  color: var(--color-darkgrey);
+  color: var(--active-acordion-text);
+ 
   }
-
+  
   .item-content {
     font-size: 1rem;
     color: var(--color-gray-body-text);
@@ -1274,7 +1297,7 @@ footer {
         justify-content: center;
         align-items: center;  
         border-radius: 8px;
-        background-color: var(--background-accent-color);
+        background-color: var(--background-color-subscribe);
         
      
 
