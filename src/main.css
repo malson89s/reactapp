@@ -4,6 +4,8 @@
     --color-dark: #0B0F19;
     --color-primary: #6366F1;
     --color-lightgray: #F3F6FF;
+    --background-secondary-color: #EFF2FC;
+    --background-color-secondary:#EFF2FC;
     --color-secondary-gray: #EFF2FC;
     --color-divider-border-gray: #E2E5F1;
     --color-forms-border: #D4D7E5;
@@ -18,30 +20,95 @@
     --color-yellow: #FFBA08;
     --color-box-shadow:0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
     --color-hover-accordion-button: #6365f1be;
+    --button-circle-text-hover-color: #0b0f19;
+    --background-color-opasity: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+
+    --background-color:#EFF2FC;
+    --background-accent-color:#FFFFFF;
+    --background-color-opasity-nav:#FFFFFF;
     
 
     --container-padding: 1rem;
     --transition-time: all 0.2s;
+
+    --link-color: #6366f1;
+    --link-icon-color:#6366f1 ;
+    --link-hover-color: #33354D;
+    --link-active-color: #6366f1;
+    --box-shadow: 0 0 8px 2px #rgba(0, 0, 0, 0.04);
+    --button-accordion-icon-color: #565973;
+}
+
+
+
+
+/* DARK */
+.dark {
+    color-scheme: dark;
+    --background-color-secondary: #565973;
+    --background-color: #0b0f19;
+    --background-color-opasity-nav:#4c4f574d; 
+
+    
+    --background-secondary-color:#0b0f19;
+    --background-gradient-color: linear-gradient(0deg, #6366f11a 0%, #da46ef0d 42%, #0b0f19 83%);
+    --background-accent-color: #1f2029;
+
+    --button-download-background-color: #e2e5f1;
+    --button-download-text-color: #0b0f19;
+    
+
+
+    
+
+    
+
+    --text-color: #666b7d;
+    --text-headline-color: #FFFFFF;
+
+    --border-color: #33354d;
+    --box-shadow: 0 0 5px #rgba(180, 180, 180, 0.1);
+    
+
+
+
+
+
 }
 
 * {
     box-sizing: border-box;
+}
+/* DARK END */
+
+* {
+    box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+
 }
 
-body, section, div, header, footer, main, aside, nav, blockquote, p, span {   
+ html, body, section, div, header, footer, main, aside, nav, h1, h2, h3, h4, h5, h6 blockquote, p, span {   
     margin: 0;
     padding: 0;
     line-height: 1.5;
 
 }
 
+html {
+    color-scheme: light;
+    
+}
+
 body {
+    font-size: 16px;
     font-family: "Manrope", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1.125rem;
+    
     
     h4 {
         font-size: 1.5rem;
@@ -71,12 +138,20 @@ body {
     
 }
 
+.shadow {
+    box-shadow: var(--box-shadow);
+}
+
 
 
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    
+    
+    
+    
 }
 
 /* mobilläge */
@@ -89,12 +164,16 @@ body {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover {
     color: var(--color-primary);
+    text-decoration: underline;
+}
+a:is(:hover, :focus) {
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
@@ -104,6 +183,7 @@ a:hover {
     border-radius: 8px;
     padding: 9px 20px;
     display: flex;
+    margin-right: 2rem;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -117,8 +197,16 @@ a:hover {
 
 .btn-primary i {
     margin-right: 0.5rem;
+    
+    
 }
 
+.btn-circle:is(:hover, :focus) {
+    background-color: transparent;
+    color: var(--button-circle-text-hover-color);
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+}
 
 
 
@@ -164,6 +252,8 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 8rem;
+    margin-right: 0;
 
 }
 /* vid mobil läge */
@@ -176,6 +266,7 @@ a:hover {
     display: inline-block;
     width: 45px;
     height: 25px;
+  
 }
 
 .toggle-switch input {
@@ -225,12 +316,21 @@ a:hover {
     border-radius: 50%;
 }
 
+
+
+
+
 .navbar {
   display: none;
+
+
+
+
 }
 
+
 .nav-link {
-    color: var(--color-dark);
+    color: var(--button-download-background-color);
     font-weight: 600;
     text-decoration: none;
     padding: 1rem;
@@ -248,16 +348,31 @@ a:hover {
 
 #auth-signin {
     display: none;
+    
+    
 }
 
-header .container {
-    display: grid;
+
+header .container-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
     align-items: center;
-    grid-template-columns: 1fr auto auto;
-    gap: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 100%;
+    background-color: var(--background-color-opasity-nav);
+    
+
+    
+
 }
+
+
+
+
+
+
+
+
 
 
 footer {
@@ -334,6 +449,7 @@ footer {
     
     header .container {
         gap: 3rem;
+        
     }
 
     footer {
@@ -360,6 +476,14 @@ footer {
     header .container {
         grid-template-columns: auto 1fr auto auto;
         gap: 3rem;
+        
+
+
+    }
+    
+    header {
+        padding: block;
+
     }
 
     .navbar {
@@ -393,8 +517,8 @@ footer {
 
 /* MANAGE ALL YOUR MONEY  START*/
 #hero {
-   background: rgb(99,102,241);
-   background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+   background:var(--background-color-secondary);
+   background: var(--background-color-opasity);
    padding-bottom: 2rem;
 
    overflow: hidden;
@@ -688,7 +812,7 @@ footer {
         padding-top: 2rem;
     }
     padding: block;
-    background-color: var(--color-lightgray);
+    background-color: var(--background-secondary-color);
     text-align: center;
 
 
@@ -844,49 +968,55 @@ footer {
 /* Wrapper  background */
 #testimonials-wrapper  {
     display: block;
-    margin: 0;
-    background-color: var(--color-lightgray); 
-
-
-    .container { 
-    position: relative;
-    display: flex;
-    padding-left: 2rem;
+    align-items: center;
     justify-content: center;
-    flex-direction: row;
-    align-items: center; 
-
-}
-
-
-  .first-column {
-    margin: 0;
-    font-weight: 900;
-    
-
- }
-
-  .client-testimonials {
-    flex-direction: column;
-    padding: 1rem;
-    background-color: var(--color-white); 
-    border-radius: 8px;
-    margin: 2rem; 
-    justify-content: center;
-
-    
-     } 
+    background-color: var(--background-secondary-color); 
 
 
 
-      .testimonials  {
-        display: flex; 
-        align-items: center;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+
+
+  }
+
+
+     .testimonials  {  
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
         padding-left: 4rem;
+        
+
+        background-color: var(--background-secondary-color); 
+
+
+
+        .first-column {
+            padding-right: 4rem;
+            margin-right: 2rem;
+    
+         }
+
+        
+        
      }
-     
+
+
+
+    .testimonial {
+    
+        width: 400px;
+        height: 300px;
+        background-color: var(--color-white);
+        box-shadow: var(--color-box-shadow);
+        border-radius: 8px;
+        padding-left: 1rem;
+        margin-right: 3rem;
+        margin-left: 1rem;
+        background-color: var(--background-accent-color); 
+    }
+
+
 
   
   /*  icon styling */
@@ -953,7 +1083,7 @@ footer {
 
 /* HJÄLP AV CHATGPT */
 /* TESTIMONIAL END */
-}
+
 
 /* FAQ SECTION START */
 
@@ -1055,6 +1185,8 @@ footer {
     border-radius: 8px;
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
     cursor: pointer;
+    background-color: var(--background-accent-color);
+    
   }
   
   .item-titlebar {
@@ -1063,6 +1195,7 @@ footer {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+    
   }
   
   .item-titlebar h3 {
@@ -1136,14 +1269,13 @@ footer {
     .container { 
         display: flex;
         grid-template: repeat(1, 100px) / repeat(1, 100px);
-        padding: 2rem; 
+        padding: 4rem; 
         margin: 2fr auto;
-        margin-top: 0;
         justify-content: center;
-        align-items: center;
-
-        background: var(--color-lightgray);
+        align-items: center;  
         border-radius: 8px;
+        background-color: var(--background-accent-color);
+        
      
 
         .bell {

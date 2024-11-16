@@ -2,7 +2,7 @@ import React from 'react'
 
 import Bredcrumb from '../components/Bredcrumb'
 
-const About = () => {
+const Features = () => {
   return (
     <>
     <Bredcrumb />
@@ -10,4 +10,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Features

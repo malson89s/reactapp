@@ -2,7 +2,7 @@ import React from 'react'
 
 import Bredcrumb from '../components/Bredcrumb'
 
-const Services = () => {
+const Contact = () => {
   return (
     <>
       <Bredcrumb />
@@ -10,4 +10,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Contact

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Bredcrumb from '../components/Bredcrumb'
 
-const Projects = () => {
+const SignInUp = () => {
   return (
     <>
     <Bredcrumb />
@@ -10,4 +10,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default SignInUp

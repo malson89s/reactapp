@@ -8,6 +8,8 @@ const Hero = () => {
   return (
     <section id="hero">
     <div className="container"> 
+
+
       <div className="headline">
        <h1>Manage All Your Money in One App</h1>
       </div>
@@ -36,6 +38,7 @@ const Hero = () => {
        <img className="img-back" src={IphoneMyBudget} alt="iphone displaying graph credit" />
        <img className="img-front" src={IphoneYourCards} alt="iphone displaying credit card" />
      </div>
+     
    </div>
  </section>
   )
