@@ -15,20 +15,20 @@ const ClientTestimonials = () => {
     }, [])
 
   return (
-    <section id="testimonials-wrapper" >       
-        <div className="client-testimonials">
-            <div className="second-column, third-column">
-                <div className="testimonials">
-                 <h2 className="first-column">Clients are <br /> Loving Our App</h2>
-                  {
-                    testimonials.map((testimonial) => (
-                      <Testimonial key={testimonial.id} item={testimonial} />
-                    ))
-                  }
-                
-                 </div>
-                </div>
-                </div>
+  <section id="testimonials-wrapper" >       
+    <div className="client-testimonials">
+        <div className="second-column, third-column">
+            <div className="testimonials">
+              <h2 className="first-column">Clients are <br /> Loving Our App</h2>
+              {
+                testimonials.map((testimonial) => (
+                  <Testimonial key={testimonial.id} item={testimonial} />
+                ))
+              }
+            
+              </div>
+            </div>
+          </div>
     </section>
   )
 }

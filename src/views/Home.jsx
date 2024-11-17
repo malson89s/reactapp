@@ -11,7 +11,7 @@ import ClientTestimonials from '../components/ClientTestimonials'
 const Home = ({ isDarkMode }) => {
   return (
     <>
-      <Hero isDarkMode={isDarkMode} /> {/* Pass the isDarkMode prop to Hero */}
+      <Hero isDarkMode={isDarkMode} /> 
       <Brands />
       <Features />
       <Slider />

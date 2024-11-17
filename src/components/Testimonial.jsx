@@ -9,7 +9,6 @@ const Testimonial = ({ item }) => {
 
   
 
-
   return (
     <section id="testimonial-wrapper">
     <div className="client-testimonials">

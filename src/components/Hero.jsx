@@ -19,7 +19,7 @@ const Hero = ({ isDarkMode }) => {
             <a className="btn-download-app" href="#">
               <span className="sr-only">Download on the App Store</span>
               <img
-                src={isDarkMode ? LogoTypeDark : LogoTypeLight} // Conditionally set image based on dark mode
+                src={isDarkMode ? LogoTypeDark : LogoTypeLight} //  set image based on dark mode
                 alt="download appstore button"
               />
             </a>
@@ -27,7 +27,7 @@ const Hero = ({ isDarkMode }) => {
             <a className="btn-download-app" href="#">
               <span className="sr-only">Get it on Google Play</span>
               <img
-                src={isDarkMode ? ImageDark : ImageLight} // Conditionally set image based on dark mode
+                src={isDarkMode ? ImageDark : ImageLight} //  set image based on dark mode
                 alt="get it on googleplay button"
               />
             </a>
